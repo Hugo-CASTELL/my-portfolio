@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Teko';
+  src: url('../assets/fonts/Teko-Variable.woff2') format('woff2'),
+  url('../assets/fonts/Teko-Variable.woff') format('woff'),
+  url('../assets/fonts/Teko-Variable.ttf') format('truetype');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-title: 'Teko';
+  
+  --very-big-title-size: 180px;
+  --title-size: 24px;
+  --subtitle-size: 18px;
+  
+  --color-primary: var(--color-gray-100);
+  --color-font-primary: var(--color-primary);
+  --color-background: #010100;
+  
+  --color-shockingly-green: #0ae448;
+  --color-lt-green: #abff84;
+  --color-orangey: #ff8709;
+  --color-pinky: #f7bdf8;
+  --color-early-night-blue: #2f3cc0;
+  --color-turquoise: #00bae2;
+  --color-sky: #5be1ff;
+  --color-glass-blue: #98ecff;
+  --color-test: #f0fcff;
+  
+  --gradient-matcha: linear-gradient(114.41deg,var(--color-shockingly-green) 20.74%,var(--color-lt-green) 65.5%);
+  --gradient-orange-crush: linear-gradient(111.45deg, var(--color-orangey) 19.42%, var(--color-pinky) 73.08%);
+  --gradient-purple-haze: linear-gradient(153.58deg, var(--color-pinky) 32.25%, var(--color-early-night-blue) 92.68%);
+  --gradient-skyfall: linear-gradient(131.77deg, var(--color-early-night-blue) 30.82%, var(--color-turquoise) 81.82%);
+  --gradient-sky: radial-gradient(78.77% 78.77% at 71.71% 30.77%, var(--color-primary) 0%, #9bedff 67.21%, var(--color-glass-blue) 76.04%, var(--color-sky) 84.9%, var(--color-turquoise) 94.79%);
+  
+  --background-image-gradient-matcha: var(--gradient-matcha);
+  --background-image-gradient-orange-crush: var(--gradient-orange-crush);
+  --background-image-gradient-purple-haze: var(--gradient-purple-haze);
+  --background-image-gradient-skyfall: var(--gradient-skyfall);
+  --background-image-gradient-sky: var(--gradient-sky);
+}
