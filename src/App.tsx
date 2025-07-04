@@ -2,7 +2,8 @@ import {Route, Routes} from "react-router-dom";
 import LandingPage from "./pages/LandingPage.tsx";
 import ProjectsPage from "./pages/ProjectsPage.tsx";
 import type {ReactElement} from "react";
-import NavBar from "./components/main/NavBar.tsx";
+import NavBar from "./utils/components/main/NavBar.tsx";
+import Revealer from "./utils/components/main/Revealer.tsx";
 
 export interface RouteWrapper {
   title: string;
@@ -22,6 +23,9 @@ export default function App() {
 
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-background text-font-primary">
+      {/* Revealer */}
+      <Revealer />
+
       {/* Navigation */}
       <div className={"h-[5%] w-full"}>
         <NavBar routes={routes} />

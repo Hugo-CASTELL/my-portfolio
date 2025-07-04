@@ -1,30 +1,11 @@
 import {type RefObject, useEffect, useRef, useState} from "react";
 import gsap from "../plugins/gsap.ts"
+import {gradients} from "../utils/gradients/gradients.ts";
 
 export default function LandingPage() {
 
   const pinnedContent: string[] = new Array(5).fill("");
-  pinnedContent.forEach((_, i) => {
-    switch (i) {
-      case 0:
-        pinnedContent[i] = "bg-gradient-matcha";
-        break;
-      case 1:
-        pinnedContent[i] = "bg-gradient-orange-crush";
-        break;
-      case 2:
-        pinnedContent[i] = "bg-gradient-purple-haze";
-        break;
-      case 3:
-        pinnedContent[i] = "bg-gradient-skyfall";
-        break;
-      case 4:
-        pinnedContent[i] = "bg-gradient-sky";
-        break;
-      default:
-        pinnedContent[i] = `bg-primary`;
-    }
-  })
+  pinnedContent.forEach((_, i) => pinnedContent[i] = gradients[i % gradients.length]);
 
   //#region State
 
