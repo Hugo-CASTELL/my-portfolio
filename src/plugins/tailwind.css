@@ -17,7 +17,7 @@
   --title-size: 24px;
   --subtitle-size: 18px;
   
-  --color-primary: var(--color-gray-100);
+  --color-primary: rgb(255, 252, 225);
   --color-font-primary: var(--color-primary);
   --color-background: #010100;
   
@@ -36,10 +36,12 @@
   --gradient-purple-haze: linear-gradient(153.58deg, var(--color-pinky) 32.25%, var(--color-early-night-blue) 92.68%);
   --gradient-skyfall: linear-gradient(131.77deg, var(--color-turquoise) 30.82%, var(--color-early-night-blue) 81.82%);
   --gradient-sky: linear-gradient(131.77deg, var(--color-glass-blue) 25.82%, var(--color-turquoise) 78.82%);
+  --gradient-summer-fair: linear-gradient(144.02deg, var(--color-turquoise) 4.56%, var(--color-pinky) 72.98%);
   
   --background-image-gradient-matcha: var(--gradient-matcha), url('../assets/images/noise.png');
   --background-image-gradient-orange-crush: var(--gradient-orange-crush), url('../assets/images/noise.png');
   --background-image-gradient-purple-haze: var(--gradient-purple-haze), url('../assets/images/noise.png');
   --background-image-gradient-skyfall: var(--gradient-skyfall), url('../assets/images/noise.png');
   --background-image-gradient-sky: var(--gradient-sky), url('../assets/images/noise.png');
+  --background-image-gradient-summerfair: var(--gradient-summer-fair), url('../assets/images/noise.png');
 }

@@ -66,7 +66,7 @@ export default function LandingPage() {
               ))
             )}
             <div className={"scale-y-180 origin-center translate-y-3.5"}>
-              <h1 className="text-(length:--very-big-title-size) ">Portfolio</h1>
+              <h1 className={"text-(length:--very-big-title-size)"}>Portfolio</h1>
             </div>
           </div>
           <p className={"text-7xl scale-x-115 [writing-mode:sideways-lr]"}>

@@ -4,4 +4,5 @@ export const gradients = [
   "bg-gradient-purple-haze",
   "bg-gradient-skyfall",
   "bg-gradient-sky",
+  "bg-gradient-summerfair",
 ]
