@@ -13,11 +13,12 @@ export interface RouteWrapper {
 
 export default function App() {
   const routes: RouteWrapper[] = [
+    { title: "Career development", path: "/career-development", element: <ProjectsPage /> },
+    { title: "Blog", path: "/blog", element: <ProjectsPage /> },
+    { title: "About me", path: "/about-me", element: <ProjectsPage /> },
     { title: "Home", path: "/", element: <LandingPage /> },
     { title: "Projects", path: "/projects", element: <ProjectsPage /> },
-    { title: "About me", path: "/about-me", element: <ProjectsPage /> },
-    { title: "International mobility", path: "/international-mobility", element: <ProjectsPage /> },
-    { title: "Career development", path: "/career-development", element: <ProjectsPage /> },
+    { title: "Mobility", path: "/international-mobility", element: <ProjectsPage /> },
     { title: "Civic engagement", path: "/civic-engagement", element: <ProjectsPage /> },
   ]
 

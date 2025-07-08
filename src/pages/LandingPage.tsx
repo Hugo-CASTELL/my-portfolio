@@ -39,9 +39,9 @@ export default function LandingPage() {
           skewY: isHovered ? 0 : factorOfSide * (-2 * factor + 2),
           duration: 0.3,
           ease: "ease.inOut",
-        });
-      });
-    };
+        })
+      })
+    }
 
     animate(); // Run once on change
   }, [hoveredIndex]);
@@ -51,7 +51,11 @@ export default function LandingPage() {
     <div className="relative flex flex-col h-full">
 
       <div className={"grow flex flex-col items-center justify-center w-full uppercase text-center font-extrabold tracking-tighter"}>
-        <h1 className="text-(length:--title-size) tracking-normal">Hello I am Hugo Castell and this is my </h1>
+        <h1 className="text-(length:--title-size) tracking-normal inline-flex items-center gap-8">
+          Hello I am
+          <div className={"rounded-lg bg-primary text-background p-3"}>Hugo Castell</div>
+          this is my
+        </h1>
         <div className={"flex justify-between w-full"}>
           <p className={"text-7xl scale-x-115 [writing-mode:vertical-lr]"}>
             Contact
