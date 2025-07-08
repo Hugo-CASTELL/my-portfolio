@@ -1,29 +1,29 @@
 import gsap from "../../plugins/gsap.ts"
-import {gradients} from "../gradients/gradients.ts";
+import { gradients } from "../gradients/gradients.ts"
 
-export const revealerID = "revealer";
-export const subRevealerID = (n: number) => `sub-revealer${n}`;
-export const subRevealCount = gradients.length;
-export const revealDuration = 1.0;
+export const revealerID = "revealer"
+export const subRevealerID = (n: number) => `sub-revealer${n}`
+export const subRevealCount = gradients.length
+export const revealDuration = 1.0
 
 export const triggerReveal = (skipFirstPart?: boolean) => {
-
   const timeline = gsap.timeline()
 
-  timeline
-    .add("start")
+  timeline.add("start")
 
   timeline.to(
     `#${revealerID}`,
     {
       display: "flex",
     },
-    "start"
+    "start",
   )
 
-  if(!skipFirstPart) {
-    timeline
-      .add("middle", `start+=${revealDuration / 2 + revealDuration / 2 * 0.2}`)
+  if (!skipFirstPart) {
+    timeline.add(
+      "middle",
+      `start+=${revealDuration / 2 + (revealDuration / 2) * 0.2}`,
+    )
 
     for (let i = 0; i < subRevealCount; i++) {
       timeline.fromTo(
@@ -33,10 +33,10 @@ export const triggerReveal = (skipFirstPart?: boolean) => {
         },
         {
           y: 0,
-          duration: revealDuration / 2 * 0.8,
+          duration: (revealDuration / 2) * 0.8,
           ease: "ease.in",
         },
-        `start+=${0.1 * i}`
+        `start+=${0.1 * i}`,
       )
     }
   }
@@ -49,21 +49,17 @@ export const triggerReveal = (skipFirstPart?: boolean) => {
       },
       {
         height: 0,
-        duration: revealDuration / 2 * 0.8,
+        duration: (revealDuration / 2) * 0.8,
         ease: "ease.in",
       },
-      `${skipFirstPart ? 'start' : 'middle'}+=${0.1 * i}`
+      `${skipFirstPart ? "start" : "middle"}+=${0.1 * i}`,
     )
   }
 
   timeline.eventCallback("onComplete", () => {
-    gsap.to(
-      `#${revealerID}`,
-      {
-        display: "none",
-        duration: 0.001,
-      }
-    )
+    gsap.to(`#${revealerID}`, {
+      display: "none",
+      duration: 0.001,
+    })
   })
-
 }
